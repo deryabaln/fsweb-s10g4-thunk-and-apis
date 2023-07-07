@@ -10,11 +10,11 @@ import { myReducer } from './reducers';
 import thunk from 'redux-thunk';
 
 
-const depo = createStore(myReducer, applyMiddleware(thunk));
+const store = createStore(myReducer, applyMiddleware(thunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={depo}>
+  <Provider store={store}>
     <BrowserRouter>
       <>
         <App />
